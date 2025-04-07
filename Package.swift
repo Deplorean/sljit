@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "libz",
+    name: "sljit",
     platforms: [
         .macOS(.v15),
         .visionOS(.v2),
