@@ -35,7 +35,16 @@ let package = Package(
                 .process("LICENSE")
             ],
             cSettings: [
-                .define("SLJIT_CONFIG_ARM_64", to: "1")
+                .define("SLJIT_CONFIG_ARM_64", to: "1"),
+                .unsafeFlags([
+                    "-Wdeclaration-after-statement",
+                    "-Wextra",
+                    "-Wconversion",
+                    "-Wsign-compare",
+                    "-Wunused-function",
+                    "-Wshadow",
+                    "-Werror"
+                ])
             ]
         )
     ]
