@@ -30,11 +30,10 @@ let package = Package(
                 
                 // sources *.c
                 "sljit_src/sljitLir.c",
-                "sljit_src/sljitUtils.c",
-                
+                "sljit_src/sljitUtils.c"
             ],
             cSettings: [
-                .define("SLJIT_CONFIG_AUTO")
+                .define("SLJIT_CONFIG_ARM_64", to: "1")
             ]
         )
     ]
