@@ -12,7 +12,6 @@ let package = Package(
     ],
     products: [
         .library(name: "sljit",
-                 type: .dynamic,
                  targets: ["sljit"]
         )
     ],
@@ -31,6 +30,9 @@ let package = Package(
                 // sources *.c
                 "sljit_src/sljitLir.c",
                 "sljit_src/sljitUtils.c"
+            ],
+            resources: [
+                .process("LICENSE")
             ],
             cSettings: [
                 .define("SLJIT_CONFIG_ARM_64", to: "1")
