@@ -25,11 +25,16 @@ let package = Package(
             sources: [
                 // sljit
                 // headers *.h
-
+                "sljit_src/sljitConfig.h",
+                "sljit_src/sljitLir.h",
+                
                 // sources *.c
-
+                "sljit_src/sljitLir.c",
+                "sljit_src/sljitUtils.c",
+                
             ],
             cSettings: [
+                .define("SLJIT_CONFIG_AUTO")
             ]
         )
     ]
