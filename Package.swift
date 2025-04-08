@@ -22,9 +22,6 @@ let package = Package(
         ),
         .target(
             name: "sljit",
-            exclude: [
-
-            ],
             sources: [
                 // sljit
                 // headers *.h
@@ -39,7 +36,7 @@ let package = Package(
                 .process("LICENSE")
             ],
             cSettings: [
-                //.define("SLJIT_CONFIG_ARM_64", to: "1"),
+                .define("SUPPORT_JIT", to: "1", .when(platforms: [ .macOS ])),
                 .unsafeFlags([
                     "-Wdeclaration-after-statement",
                     "-Wextra",

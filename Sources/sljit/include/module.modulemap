@@ -1,4 +1,4 @@
 module sljit {
-    header "sljit-Bridging-Header.h"
+    header "../sljit_src/sljitLir.h"
     export *
 }
