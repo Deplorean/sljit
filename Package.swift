@@ -16,6 +16,12 @@ let package = Package(
         )
     ],
     targets: [
+        .testTarget(
+            name: "sljit_tests",
+            dependencies: [
+                "sljit"
+            ]
+        ),
         .target(
             name: "sljit",
             exclude: [
