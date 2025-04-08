@@ -6,9 +6,7 @@ import PackageDescription
 let package = Package(
     name: "sljit",
     platforms: [
-        .macOS(.v15),
-        .visionOS(.v2),
-        .iOS(.v15)
+        .macOS(.v15)
     ],
     products: [
         .library(name: "sljit",
@@ -41,7 +39,7 @@ let package = Package(
                 .process("LICENSE")
             ],
             cSettings: [
-                .define("SLJIT_CONFIG_ARM_64", to: "1"),
+                //.define("SLJIT_CONFIG_ARM_64", to: "1"),
                 .unsafeFlags([
                     "-Wdeclaration-after-statement",
                     "-Wextra",
